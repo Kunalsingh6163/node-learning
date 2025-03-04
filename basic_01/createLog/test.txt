@@ -19,3 +19,10 @@ Hi creating the file with fs module
 1740586015186: /favicon.ico New Req Received 
 1740586029714: /about New Req Received 
 1740586029897: /favicon.ico New Req Received 
+1741077729902: / New Req Received 
+1741077730540: /favicon.ico New Req Received 
+1741077735191: /about New Req Received 
+1741077825570: /about New Req Received 
+1741077932602: /about New Req Received 
+1741078163355: /contact New Req Received 
+1741078163861: /favicon.ico New Req Received 
