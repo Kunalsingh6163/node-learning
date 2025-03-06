@@ -7,3 +7,13 @@
  1741186787526 : GET : /favicon.ico
  1741186798570 : GET : /api/user
  1741193891642 : GET : /api/user/1151
+ 1741236210683 : GET : /favicon.ico
+ 1741260566915 : GET : /api/user/11
+ 1741262802343 : POST : /api/user
+ 1741263324072 : POST : /api/user
+ 1741263529990 : GET : /user
+ 1741263540128 : GET : /users
+ 1741263619158 : GET : /api/user
+ 1741263735287 : GET : /api/user/67c98fd2012f8cb0b38c537d
+ 1741264032219 : PATCH : /api/user/67c98fd2012f8cb0b38c537d
+ 1741264096671 : PATCH : /api/user/67c98fd2012f8cb0b38c537d
