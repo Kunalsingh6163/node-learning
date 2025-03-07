@@ -3,48 +3,26 @@ const users = require("./MOCK_DATA.json");
 const fs = require("fs");
 const { generateKeyPair } = require("crypto");
 const { connectToDatabase } = require("./dbconnection");
-const mongoose = require("mongoose");
+
+
+// Routes import here
+const userRouter = require("./routes/user");
+const {logResponce}= require("./middleware");
 
 const app = express();
-const PORT = 8000;
+const PORT = 8000; 
 
 //Middleware
 app.use(express.urlencoded({ extended: false }));
-
-app.use((req, res, next) => {
-  fs.appendFile(
-    "log.txt",
-    `\n ${Date.now()} : ${req.method} : ${req.path}`,
-    (err, data) => {
-      next();
-    }
-  );
-});
+app.use(logResponce("log.txt"));
 
 //db connection and schema
 connectToDatabase();
 
-const { Schema } = mongoose;
-const userSchema = new Schema(
-  {
-    first_name: {
-      type: String,
-      required: true,
-    },
-    last_name: String,
-    email: {
-      type: String,
-      required: true,
-      unique: true,
-    },
-    gender: String,
-    job_title: String,
-  },
-  { timestamps: true }
-);
-const User = mongoose.model("Usertest", userSchema);
-
 //Routes
+app.use("/api/user", userRouter);
+
+
 app.get("/users", async (req, res) => {
   const alldbusers = await User.find({});
   const html = `<ul>
