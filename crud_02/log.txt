@@ -18,3 +18,6 @@
  1741264032219 : PATCH : /api/user/67c98fd2012f8cb0b38c537d
  1741264096671 : PATCH : /api/user/67c98fd2012f8cb0b38c537d
  1741359707679 : GET : /api/user/67c98fd2012f8cb0b38c537d
+ 1745335065357 : ::1 : GET : /users 
+
+ 1745335116122 : ::1 : GET : /api/user 
